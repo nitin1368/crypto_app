@@ -4,8 +4,6 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Navigation from "./pages/Navigation";
 import "./pages/gg.css";
-
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
