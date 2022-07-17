@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./gg.css";
 import Coin from "./Coin"
-function Home() {
+function All() {
 
     const [coins, setCoins] = useState([])
     const [search, setSearch] = useState('')
@@ -34,19 +34,8 @@ function Home() {
             <br />
             <br />
             <br />
-            <br />
-            <br />
-            <div className="hh">
-                <h1>Cryptocurrency Prices by Market Cap:</h1>
-            </div>
 
-            {filteredCoins.slice(0, 10
-
-
-
-
-
-            ).map(coin => {
+            {filteredCoins.slice(0, 100).map(coin => {
                 return (
 
 
@@ -65,4 +54,5 @@ function Home() {
         </div>
     )
 }
-export default Home;
+
+export default All;

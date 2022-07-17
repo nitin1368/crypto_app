@@ -1,8 +1,7 @@
 .coin-container {
-
     display: flex;
     justify-content: center;
-    /* background-color: aqua; */
+
 }
 
 .coin-row {
@@ -15,13 +14,15 @@
     border-radius: 10px;
     width: 900px;
     margin-bottom: 10px;
-    background-color: #98FB98;
-
+    background-color: #b3ffcc;
+    padding-right: 10px;
 }
 
 .coin-row:hover {
-    background-color: #f00606;
-    border: 1px solid black;
+    background-color: #00b33c;
+    border: 2px solid black;
+    font-weight: bold;
+
 }
 
 .coin {
@@ -76,5 +77,5 @@
 }
 
 .green {
-    color: #11d811;
+    color: #00e64d
 }

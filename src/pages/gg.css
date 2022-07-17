@@ -1,15 +1,24 @@
 /* APP CSS */
+.footer {
+    background-color: green;
+    border-top: 2px solid black;
+    /* width: 100%; */
+
+    /* margin-bottom: 0; */
+
+    color: white;
+    font-size: 25px;
+}
+
 
 
 .roo {
 
     background-image: url("hii.jpg");
     background-repeat: repeat-y;
-    /* width: 100%; */
 
-    /* background-size: 100vw 100vh; */
 
-    height: 9000px;
+    height: 100%;
     width: 100%;
     /* position: absolute;
     top: 0;
@@ -89,7 +98,11 @@
     box-shadow: 1.5px 1.5px black;
 }
 
-
+.hh {
+    /* position: absolute; */
+    margin-top: -100px;
+    color: whitesmoke;
+}
 
 .ss {
 
@@ -104,10 +117,17 @@
     border-radius: 20px;
 }
 
-/* .homeinp {
-    margin-top: 60px;
-    position: absolute;
-} */
+/* ALL CSS */
+
+/* LEARN CSS */
+.lrn {
+    color: white;
+    background-image: url("OIP.jpg");
+
+
+
+    background-size: 100vw 100vh;
+}
 
 /* ABOUT CSS */
 .aboutH1 {
