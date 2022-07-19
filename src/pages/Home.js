@@ -3,7 +3,6 @@ import axios from "axios";
 import "./gg.css";
 import Coin from "./Coin"
 function Home() {
-
     const [coins, setCoins] = useState([])
     const [search, setSearch] = useState('')
     useEffect(() => {
@@ -17,9 +16,30 @@ function Home() {
     const handleChange = e => {
         setSearch(e.target.value)
     }
-    const filteredCoins = coins.filter(coin =>
-        coin.name.toLowerCase().includes(search.toLowerCase())
-    )
+    let filteredCoins;
+    let light = 1;
+    if (search === '') {
+        light = 1;
+        filteredCoins = coins.filter(coin =>
+            coin.name.toLowerCase().includes(search.toLowerCase())
+
+        )
+        console.log(light);
+    } else {
+        light = 2;
+
+        filteredCoins = coins.filter(coin =>
+            coin.name.toLowerCase().includes(search.toLowerCase())
+        )
+
+        console.log(light);
+        console.log(filteredCoins);
+        if (filteredCoins.length === 0) {
+            light = 4;
+            console.log(light);
+        }
+    }
+
     return (
 
         <div className="big">
@@ -36,32 +56,29 @@ function Home() {
             <br />
             <br />
             <br />
-            <div className="hh">
-                <h1>Cryptocurrency Prices by Market Cap:</h1>
+
+
+
+            <div id="rohit" className={`x${light}`}>
+                {light !== 4 ? <div className="hh">
+                    <h1>Cryptocurrency Prices by Market Cap:</h1>
+                </div> : <div className="ErrorMessage"><h1 className="Error">Please Enter Valid Coin!!!!</h1></div>}
+
+                {filteredCoins.slice(0, 10).map(coin => {
+                    return (
+                        <Coin
+                            key={coin.id}
+                            name={coin.name}
+                            image={coin.image}
+                            symbol={coin.symbol}
+                            marketcap={coin.market_cap}
+                            price={coin.current_price}
+                            pricechange={coin.price_change_percentage_24h}
+                        />
+
+                    );
+                })}
             </div>
-
-            {filteredCoins.slice(0, 10
-
-
-
-
-
-            ).map(coin => {
-                return (
-
-
-                    <Coin
-                        key={coin.id}
-                        name={coin.name}
-                        image={coin.image}
-                        symbol={coin.symbol}
-                        marketcap={coin.market_cap}
-                        price={coin.current_price}
-                        pricechange={coin.price_change_percentage_24h}
-                    />
-
-                );
-            })}
         </div>
     )
 }

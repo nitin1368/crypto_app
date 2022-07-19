@@ -11,7 +11,6 @@ function Navigation() {
                 <li className="liStyle"><Link to="./All" className="ll">All</Link></li>
                 <li className="liStyle"><Link to="./Learn" className="ll">Learn Crypto</Link></li>
                 <li className="liStyle"><Link to="./About" className="ll">About</Link></li>
-                <li className="liStyle"><Link to="./Contact" className="ll">Contact</Link></li>
 
 
             </ul>
